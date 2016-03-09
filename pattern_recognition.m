@@ -29,8 +29,8 @@ covarianceMatrixTriangles = createCovarianceMatrix(trianglesX1, trianglesX2);
 covarianceMatrixSquares = createCovarianceMatrix(squaresX1, squaresX2);
 
 function g = g(featureVector, covarianceMatrix, mean, x1, x2)
-  invCovarianceMatrix = inv(covarianceMatrix);
-  detCovarianceMatrix = det(covarianceMatrix);
+  invCovarianceMatrix = inv(covarianceMatrix); #inverse
+  detCovarianceMatrix = det(covarianceMatrix); #determinant
   unknown = [x1-mean(1); x2-mean(2)];
   
   g = -log(detCovarianceMatrix) - (unknown' * invCovarianceMatrix * unknown);
