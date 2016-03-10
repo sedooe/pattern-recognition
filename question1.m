@@ -14,7 +14,7 @@ meanOfSquares = mean(squares, 2);
 covarianceMatrixTriangles = createCovarianceMatrix(trianglesX1, trianglesX2);
 covarianceMatrixSquares = createCovarianceMatrix(squaresX1, squaresX2);
 
-g1 = g(triangles, covarianceMatrixTriangles, meanOfTriangles);
-g2 = g(squares, covarianceMatrixSquares, meanOfSquares);
+g1 = g(covarianceMatrixTriangles, meanOfTriangles);
+g2 = g(covarianceMatrixSquares, meanOfSquares);
 gX = g1-g2;
 display(gX);

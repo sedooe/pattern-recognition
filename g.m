@@ -1,4 +1,4 @@
-function g = g(featureVector, covarianceMatrix, mean, probability)
+function g = g(covarianceMatrix, mean) #TODO: add probability parameter.
   x1 = sym("x1"); #symbolic variables.
   x2 = sym("x2"); #TODO: dependency documentation. (symbolic, sympy, anaconda)
 
