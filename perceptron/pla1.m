@@ -10,7 +10,7 @@ function w = pla1(X, Y)
     end
     
     if (sign(w' * inputs) == outputs)
-      break;
+      return;
     end  
   end
   
