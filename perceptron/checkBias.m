@@ -1,7 +1,7 @@
 function result = checkBias(w, inputs, outputs, bias)
   result = false;
   A = w' * inputs;
-  for i = 1 : size(A, 2) # maximum iteration.
+  for i = 1 : size(A, 2)
     if (outputs(i) == -1)
       if (A(i) > -1*bias)
         return;
