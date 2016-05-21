@@ -9,13 +9,13 @@ function [ID,C]= k_means(X, C)
   prev_err = 0;
   err = 0;
   while(1)  
-    step = step +1;
+    step += 1;
     
-    for j = 1:n
+    for j = 1 : n
       # Find nearest centroid for X(:,j)
       min_i = 1;
       min_dist = distance(C(:,1),X(:,j)); 
-      for i = 2:K
+      for i = 2 : K
         d = distance(C(:,i), X(:,j));
         if ( d < min_dist )
             min_dist = d;
@@ -26,7 +26,7 @@ function [ID,C]= k_means(X, C)
     end
     
     prev_err = err;
-    for i = 1:K # update the centroidsi
+    for i = 1 : K # update the centroids
       ID_i = find(ID == i);
       C(:,i) = sum(X(:,ID_i),2)/length(ID_i);
       err = sum(distance(X(:,ID_i), repmat(C(:,i),1,length(ID_i))));
